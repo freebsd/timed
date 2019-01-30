@@ -86,7 +86,7 @@ daydiff(char *hostname)
 	struct timeval tout, now;
 	fd_set ready;
 	struct sockaddr from;
-	int fromlen;
+	socklen_t fromlen;
 	unsigned long sec;
 
 
@@ -266,7 +266,8 @@ msite(int argc, char *argv[])
 	ssize_t cc;
 	fd_set ready;
 	struct sockaddr_in dest;
-	int i, length;
+	int i;
+	socklen_t length;
 	struct sockaddr_in from;
 	struct timeval tout;
 	struct tsp msg;
@@ -419,7 +420,7 @@ void
 tracing(int argc, char *argv[])
 {
 	int onflag;
-	int length;
+	socklen_t length;
 	ssize_t cc;
 	fd_set ready;
 	struct sockaddr_in dest;

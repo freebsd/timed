@@ -73,7 +73,7 @@ struct timeval from_when;
 struct tsp *
 readmsg(int type, char *machfrom, struct timeval *intvl, struct netinfo *netfrom)
 {
-	int length;
+	socklen_t length;
 	fd_set ready;
 	static struct tsplist *head = &msgslist;
 	static struct tsplist *tail = &msgslist;

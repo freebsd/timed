@@ -6,10 +6,5 @@
 PROG=	timedc
 MAN=	timedc.8
 SRCS=	cmds.c cmdtab.c timedc.c byteorder.c measure.c cksum.c
-BINOWN=	root
-BINMODE= 4555
 
-WARNS?=	1
-
-.include "../../Makefile.inc"
 .include <bsd.prog.mk>

@@ -65,7 +65,7 @@ static n_short seqno = 0;
 int					/* status val defined in globals.h */
 measure(u_long maxmsec, u_long wmsec, char *hname, struct sockaddr_in *addr, int print)
 {
-	int length;
+	socklen_t length;
 	int measure_status;
 	int rcvcount, trials;
 	int cc, count;
